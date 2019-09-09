@@ -105,10 +105,6 @@ I do some error handling of attributes in the mixtape.json file. I should probab
   }
 }
 
-
-
-
-
 ## Scope considerations
 
 File size of the mixtape.json is limited to cache size. If the requirement was allow\handle millions of records, I would move from an in cache pseudo data store to a real database (postgres,mysql). I would change the requirement of the file structure to be a PSV (Pipe separated list) allowing me to utilize Postgres data copy utility. I would stream in the file a thousand items at a time and pipe them to the DB. 
@@ -116,7 +112,6 @@ File size of the mixtape.json is limited to cache size. If the requirement was a
 The change list I would change to PSV format as well so I would be able to stream that in 1k lines at time. 
 
 The consideration here is that there is a threshold when cached values become resource dependent and performance degrades significantly. This will occur when file size reaches the 10mb plus range or so. 
-
 
 ## License
 
