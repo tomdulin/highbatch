@@ -50,6 +50,7 @@ Playlist deleting a song: one thing you will notice is that the playlist change 
 I do some error handling of attributes in the mixtape.json file. I should probably do more of this in the other models, it would really depend on what the user personae was.
 
 ## Change file format
+```
 {
   "<controller>": {
     "<action>": [
@@ -59,9 +60,11 @@ I do some error handling of attributes in the mixtape.json file. I should probab
     ]
   }
 }
+```
 
 `example`
 
+```
 {
   "playlists": {
     "new": [
@@ -102,6 +105,7 @@ I do some error handling of attributes in the mixtape.json file. I should probab
     ]
   }
 }
+```
 
 ## Scope considerations
 
