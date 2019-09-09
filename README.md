@@ -1,35 +1,33 @@
 # Highbatch
+Here are the basic parameters for this exercise:
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/highbatch`. To experiment with that code, run `bin/console` for an interactive prompt.
+This input JSON file consists of a set of users, songs, and playlists that are part of a music service: mixtape.json.
+Your application ingests mixtape.json.
+Your application ingests a changes file, which can take whatever form you like (we use changes.json in our example, but you’re free to make it text, YAML, CSV, or whatever). The changes file should include multiple changes in one file.
+Your application outputs output.json in the same structure as mixtape.json, with the changes applied. The types of changes you need to support are ennumerated below and the application should process all changes in one pass.
+Your solution includes a README that explains how to use your application and a way to validate its output.
+Your README describes what changes you would need to make in order to scale this application to handle very large input files and/or very large changes files. Just describe the changes — you don’t actually need to implement a scaled-up version of the application.
+Don’t worry about creating a UI, DB, server, or deployment.
+Your code should be executable on Mac or Linux.
+The types of changes your application needs to support are:
 
-TODO: Delete this and the text above, and describe your gem
+Add an existing song to an existing playlist.
+Add a new playlist for an existing user; the playlist should contain at least one existing song.
+Remove an existing playlist.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'highbatch'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install highbatch
 
 ## Environment Requirements
 
 Ensure that  Ruby `2.5.1` is install on your local vm
 I treid to keep dependancies to a minimum, everything contained in this gem is straight ruby.
 
-## Usage
+## Installation
 
 * clone project to local environment
 * run `bin/setup` to install dependencies
 * run `rake install` to generate gem package and install gem
+
+## Usage
 * run `highbatch <mix tape file path> <changes file path> <output file path>`
 *     example: `highbatch '/Users/<user name>/Documents/my_code/highbatch/samples/mixtape.json' '/Users/<user name>/Documents/my_code/highbatch/samples/change_file.json' '/Users/<user name>/Documents/my_code/highbatch/samples/outfile.json'`
 
