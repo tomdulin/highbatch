@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "highbatch"
+require "pry"
+
+def_mix_path = File.join(__dir__, 'lib', 'highbatch', 'samples', 'mixtape.json')
+def_changes_path = File.join(__dir__, 'lib', 'highbatch', 'samples', 'change_file.json')
+def_out_path = File.join(__dir__, 'lib', 'highbatch', 'samples', 'outfile.json')
+
+CLI.new.call({
+  input: ARGV.length > 0 ? ARGV[0] : def_mix_path,
+  changes: ARGV.length > 1 ? ARGV[1] : def_changes_path,
+  output: ARGV.length > 2 ? ARGV[2] : def_out_path,
+})
+
+# highbatch '/Users/tom.dulin/Documents/my_code/highbatch/samples/mixtape.json' '/Users/tom.dulin/Documents/my_code/highbatch/samples/change_file.json' '/Users/tom.dulin/Documents/my_code/highbatch/samples/outfile.json'

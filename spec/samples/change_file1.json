@@ -1,0 +1,40 @@
+{
+  "playlists": {
+    "new": [
+      {
+        "user_id": "2",
+        "song_ids": [
+        "12",
+        "30"
+        ]
+      },
+      {
+        "user_id": "3",
+        "song_ids": [
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+        ]
+      }
+    ],
+    "update": [
+      {
+        "id": "2",
+        "action": "add",
+        "song_ids": ["10"]
+      },
+      {
+        "id": "5",
+        "action": "add",
+        "song_ids": ["22"]
+      }
+    ],
+    "delete": [
+      {
+        "id":"2"
+      }
+    ]
+  }
+}
